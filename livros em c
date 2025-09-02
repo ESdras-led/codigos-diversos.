@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+    typedef struct {
+        char título[50];
+        char autor[50];
+        char editora[30];
+        int ano;
+        int vendas;
+    }  Livro;
+    
+    int main() {
+        
+        Livro livros[3] = {
+            
+            {"harry potter","tranfobica","rocco",1999,500000},
+            {"senhor dos aneis","tolkien","abriu",1950,1000000},
+            {"pervy jacknson","desconhecido","hbomax",2005,100000},
+        };
+        // saida de dados e controle de saida
+        
+        for (int i = 0; i<3; i++){
+            printf("o livro %s do(a) autor(a) %s foi distribuido pela distribuidora %s, sendo publicado em %d tendo uma quantidade de vendas de %d mil dolares. \n",
+            livros[i].título, livros[i].autor,livros[i].editora,livros[i].ano,livros[i].vendas);
+            
+        }
+        return 0;
+    }
